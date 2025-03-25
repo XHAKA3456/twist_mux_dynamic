@@ -1,0 +1,27 @@
+twist_mux:
+  ros__parameters:
+    topics:
+      navigation:
+        priority: 50
+        timeout: 0.5
+        topic: cmd_vel_nav
+      joystick:
+        priority: 70
+        timeout: 0.5
+        topic: cmd_vel_joy
+      arucomaker:
+        priority: 30
+        timeout: 0.5
+        topic: cmd_vel_aruco
+      saftey:
+        priority: 200
+        timeout: 3.0
+        topic: cmd_vel_safe
+
+    locks:
+      saftey:
+        priority: 210
+        topic: safe_priority
+      control:
+        priority: 100
+        topic: control_priority
